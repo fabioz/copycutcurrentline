@@ -3,11 +3,13 @@
 <repository name='file:/E:/EclipseWorkspaces/Uydu/CopyCutCurrentLineUpdate/ - metadata' type='org.eclipse.equinox.internal.p2.metadata.repository.LocalMetadataRepository' version='1.0.0'>
   <properties size='2'>
     <property name='p2.compressed' value='false'/>
-    <property name='p2.timestamp' value='1241537180514'/>
+    <property name='p2.timestamp' value='1241681605712'/>
   </properties>
-  <references size='4'>
-    <repository url='http://copycutcurrentline.googlecode.com/files' type='1' options='0'/>
+  <references size='6'>
+    <repository url='http://code.google.com/p/copycutcurrentline/source/browse/trunk' type='0' options='0'/>
     <repository url='http://copycutcurrentline.googlecode.com/files' type='0' options='0'/>
+    <repository url='http://code.google.com/p/copycutcurrentline/source/browse/trunk' type='1' options='0'/>
+    <repository url='http://copycutcurrentline.googlecode.com/files' type='1' options='0'/>
     <repository url='http://www.doganberktas.com/copycutcurrentline' type='0' options='0'/>
     <repository url='http://www.doganberktas.com/copycutcurrentline' type='1' options='0'/>
   </references>
