@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description url="http://code.google.com/p/copycutcurrentline/source/browse/trunk">
+      Copy/Cut current line in Eclipse as in .NET
+   </description>
+   <feature url="features/CopyCutCurrentLineFeature_1.0.0.jar" id="CopyCutCurrentLineFeature" version="1.0.0"/>
+</site>
