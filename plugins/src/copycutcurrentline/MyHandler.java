@@ -18,45 +18,46 @@ public class MyHandler extends AbstractHandler {
 
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		try {
-			if (event.getCommand().getName().equals("CopyCutCurrentLine.MyCopyCommand")) {
+			if (event.getCommand().getName()
+					.equals("CopyCutCurrentLine.MyCopyCommand")) {
 				if (!tw.getSelectionText().isEmpty()) {
 					tw.copy();
 					hasSomethingToPaste = false;
-				}
-				else {
-					String copyString = tw.getLine(tw.getLineAtOffset(tw.getCaretOffset()));
-					clipboard.setContents(new Object[] { copyString }, new Transfer[] { TextTransfer.getInstance() });
+				} else {
+					String copyString = tw.getLine(tw.getLineAtOffset(tw
+							.getCaretOffset()));
+					clipboard.setContents(new Object[] { copyString },
+							new Transfer[] { TextTransfer.getInstance() });
 					hasSomethingToPaste = true;
 				}
-			}
-			else if (event.getCommand().getName().equals("CopyCutCurrentLine.MyPasteCommand")) {
+			} else if (event.getCommand().getName()
+					.equals("CopyCutCurrentLine.MyPasteCommand")) {
 				if (hasSomethingToPaste) {
 					tw.invokeAction(ST.LINE_START);
-					String copyString = (String) clipboard.getContents(TextTransfer.getInstance());
+					String copyString = (String) clipboard
+							.getContents(TextTransfer.getInstance());
 					if (!copyString.endsWith(tw.getLineDelimiter()))
 						copyString += tw.getLineDelimiter();
-					clipboard.setContents(new Object[] { copyString }, new Transfer[] { TextTransfer.getInstance() });
+					clipboard.setContents(new Object[] { copyString },
+							new Transfer[] { TextTransfer.getInstance() });
 					tw.paste();
 					tw.invokeAction(ST.LINE_START);
-				}
-				else {
+				} else {
 					tw.paste();
 				}
-			}
-			else if (event.getCommand().getName().equals("CopyCutCurrentLine.MyCutCommand")) {
+			} else if (event.getCommand().getName()
+					.equals("CopyCutCurrentLine.MyCutCommand")) {
 				if (!tw.getSelectionText().isEmpty()) {
 					tw.cut();
 					hasSomethingToPaste = false;
-				}
-				else {
+				} else {
 					tw.invokeAction(ST.LINE_START);
 					tw.invokeAction(ST.SELECT_LINE_DOWN);
 					tw.cut();
 					hasSomethingToPaste = true;
 				}
 			}
-		}
-		catch (NotDefinedException e) {
+		} catch (NotDefinedException e) {
 			e.printStackTrace();
 		}
 		return null;
