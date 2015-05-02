@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: CopyCutCurrentLine Plug-in
 Bundle-SymbolicName: copycutcurrentline;singleton:=true
-Bundle-Version: 1.0.1
+Bundle-Version: 1.0.1.qualifier
 Bundle-Activator: copycutcurrentline.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

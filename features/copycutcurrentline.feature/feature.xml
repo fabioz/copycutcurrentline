@@ -104,7 +104,7 @@ This Agreement is governed by the laws of the State of New York and the intellec
    </license>
 
    <plugin
-         id="com.lembas.CopyCutCurrentLine"
+         id="copycutcurrentline"
          download-size="188"
          install-size="188"
          version="1.0.1.qualifier"/>
