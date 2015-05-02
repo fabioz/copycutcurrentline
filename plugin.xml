@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="copycutcurrentline.MyStartup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="CopyCutCurrentLine.MyCutCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+X">
+      </key>
+      <key
+            commandId="CopyCutCurrentLine.MyCopyCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+C">
+      </key>
+      <key
+            commandId="CopyCutCurrentLine.MyPasteCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+V">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="copycutcurrentline.MyHandler"
+            id="CopyCutCurrentLine.MyCutCommand"
+            name="CopyCutCurrentLine.MyCutCommand">
+      </command>
+      <command
+            defaultHandler="copycutcurrentline.MyHandler"
+            id="CopyCutCurrentLine.MyCopyCommand"
+            name="CopyCutCurrentLine.MyCopyCommand">
+      </command>
+      <command
+            defaultHandler="copycutcurrentline.MyHandler"
+            id="CopyCutCurrentLine.MyPasteCommand"
+            name="CopyCutCurrentLine.MyPasteCommand">
+      </command>
+   </extension>
+
+</plugin>
